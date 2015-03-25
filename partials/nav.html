@@ -1,0 +1,14 @@
+<div class="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="navbar-header">
+				<a class="navbar-brand" ui-sref="home">Today I Learned</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li ng-repeat="demo in demos"><a ui-sref="demos.{{ demo.slug }}">{{ demo.name }}</a></li>
+			</ul>
+		</nav>
+		
+		<select class="form-control" ng-model="nav" ng-init="nav = nav || navOptions[0].slug" ng-options="option.slug as option.name for option in navOptions"></select>
+	</div>
+</div>
